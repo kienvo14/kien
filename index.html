@@ -359,10 +359,9 @@
             </a>
           </div>
           <ul class="bullets">
-            <li>Engineered a multithreaded C++ Monte Carlo engine (50k+ season simulations) and optimized it 22× (4,048 ms → 186 ms) via cache-friendly flat arrays, hoisted RNG/λ setup, and <code>std::thread</code> parallelism across 16 cores.</li>
-            <li>Built a polyglot full-stack system — Python modelling pipeline → Flask REST API → React dashboard → SQLite — containerized with Docker Compose for one-command deploy, with a GitHub Actions <code>pytest</code> CI pipeline.</li>
-            <li>Validated out-of-sample on 1,648 matches vs. bookmaker closing odds (Brier 0.60 vs. market 0.58); corrected tail overconfidence with leave-one-season-out temperature recalibration (no look-ahead).</li>
-            <li>Quantified injury tail-risk in $ (probability × prize-money impact across the top-4 and relegation cliffs) from separately measured attacking/defensive player importance.</li>
+            <li>Built a full-stack platform that processes live player injury feeds to simulate Premier League seasons and recalculate team standings and financial outcomes in real time, using Poisson expected-goals rates and Monte Carlo simulation.</li>
+            <li>Validated out-of-sample on 1,648 matches vs. bookmaker closing odds (Brier 0.60, log-loss 1.01) and cut early-season error 12% with a shrinkage prior.</li>
+            <li>Optimized a multithreaded C++ Monte Carlo engine (50k+ simulations), reducing execution time 22× (4,048 ms → 186 ms) through flat memory layouts, hoisted loop invariants, and 16-core parallelism.</li>
           </ul>
           <div class="stack">
             <span class="tag">C++</span><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">React</span><span class="tag">Docker</span><span class="tag">SQLite</span><span class="tag">Monte Carlo</span><span class="tag">Poisson</span>
